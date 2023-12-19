@@ -31,4 +31,6 @@ class ProductFactory(factory.Factory):
         model = Product
 
     id = factory.Sequence(lambda n: n)
+    name = factory.name()
+ #   surname
    ## Add code to create Fake Products 
