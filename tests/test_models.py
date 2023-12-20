@@ -123,7 +123,7 @@ class TestProductModel(unittest.TestCase):
         self.assertEqual(product_found.price, product.price)
 
     def test_update_a_product(self):
-        """Test if product updated"""
+        """Test oif product updated"""
         product = ProductFactory()
         product.id = None
         product.create()
@@ -152,7 +152,7 @@ class TestProductModel(unittest.TestCase):
         self.assertEqual(len(Product.all()), 0)
 
     def test_list_all_products(self):
-        """Test if all product in database listed"""
+        """It should List all Products in the database"""
         products = Product.all()
         self.assertEqual(products, [])
         for _ in range(0, 5):
@@ -161,7 +161,7 @@ class TestProductModel(unittest.TestCase):
         self.assertEqual(len(Product.all()), 5)
 
     def test_find_by_name(self):
-        """Test if product can be found by name"""
+        """It should Find a Product by Name"""
         products = ProductFactory.create_batch(5)
         for product in products:
             product.create()
